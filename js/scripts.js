@@ -6,7 +6,7 @@ var map = new mapboxgl.Map({
   container: 'mapContainer',
   style: 'mapbox://styles/mapbox/outdoors-v11',
   center: [-73.985130, 40.758896],
-  zoom: 6.5
+  zoom: 10
 });
 
 map.addSource('guns', {
