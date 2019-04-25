@@ -9,16 +9,17 @@ var map = new mapboxgl.Map({
   zoom: 10
 });
 
-map.addSource('guns', {
-  type: 'geojson',
-  data: './data/map.geojson',
-});
 
 
 
 
 
 map.on('load', function(){
+
+  map.addSource('guns', {
+    type: 'geojson',
+    data: './data/map.geojson',
+  });
 
 
       map.addLayer({
