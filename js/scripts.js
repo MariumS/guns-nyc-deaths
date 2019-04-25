@@ -23,7 +23,7 @@ map.on('load', function(){
         source: 'guns',
         paint: {
           'fill-color': {
-            property: 'n_killed_t',
+            property: 'n_killed',
             stops: [[1, '#fff'], [40, '#f00']]
 }
 }
