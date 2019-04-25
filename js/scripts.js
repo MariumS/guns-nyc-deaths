@@ -22,9 +22,12 @@ map.on('load', function(){
         type: 'fill',
         source: 'guns',
         paint: {
+          'fill-opacity': 0.7,
           'fill-color': {
             property: 'n_killed',
             stops: [[1, '#fff'], [40, '#f00']]
+
+}
 }
 }
       });
