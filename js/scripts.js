@@ -1,5 +1,3 @@
-
-
 mapboxgl.accessToken = 'pk.eyJ1IjoibWFyemlwYW45NCIsImEiOiJjanVrOTdwaDQxdG42NDRwNGFmbzY5dWdtIn0.4lVQxPc89QYzHas2IIWmew';
 
 var map = new mapboxgl.Map({
@@ -9,27 +7,28 @@ var map = new mapboxgl.Map({
   zoom: 10
 });
 
-map.on('load', function(){
+map.on('load', function() {
 
-  map.addSource('guns', {
-    type: 'geojson',
-    data: './data/map.geojson',
-  });
+      map.addSource('guns', {
+        type: 'geojson',
+        data: './data/map.geojson',
+      });
 
 
       map.addLayer({
-        id: 'guns_',
-        type: 'fill',
-        source: 'guns',
-        paint: {
-          'fill-opacity': 0.7,
-          'fill-color': {
-            property: 'n_killed',
-            stops: [[1, '#fff'], [40, '#f00']]
+          id: 'guns_',
+          type: 'fill',
+          source: 'guns',
+          paint: {
+            'fill-color': {
+              property: 'n_killed',
+              stops: [
+                [1, '#fff'],
+                [40, '#f00']
+              ]
+            }
+          }
+      });
+          });
 
-}
-}
-}
-      });
-      });
-      /*/ source: http://bl.ocks.org/danswick/d813345baf286a5e0766c6b3d9de01c0 /*/
+    /*/ source: http://bl.ocks.org/danswick/d813345baf286a5e0766c6b3d9de01c0 /*/
