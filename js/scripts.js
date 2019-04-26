@@ -37,7 +37,7 @@ map.on('load', function() {
 
 
 
-map.on('hover', 'guns_', function (e) {
+map.on('click', 'guns_', function (e) {
 new mapboxgl.Popup()
 .setLngLat(e.lngLat)
 .setHTML(e.features[0].properties.n_killed)
