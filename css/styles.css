@@ -5,13 +5,12 @@ html, body {
 }
 
 #mapContainer {
-  height: 100%;
-  width: 100%;
-  background: #f7cdcd;
-  margin: 0 auto;
-
-
+  position:absolute;
+  top:0;
+  bottom:0;
+  width:100%;
 }
+
 
 .legend {
 background-color: #ffffcc;
