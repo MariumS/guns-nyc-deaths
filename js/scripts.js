@@ -47,7 +47,7 @@ new mapboxgl.Popup()
 });
 
 // Change the cursor to a pointer when the mouse is over the guns_ layer.
-map.on('mouseenter', 'states-layer', function () {
+map.on('mouseenter', 'guns_', function () {
 map.getCanvas().style.cursor = 'pointer';
 });
 
@@ -56,6 +56,7 @@ map.on('mouseleave', 'guns_', function () {
 map.getCanvas().style.cursor = 'pointer';
 });
 
-});
 
-/*/ source: http://bl.ocks.org/danswick/d813345baf286a5e0766c6b3d9de01c0 /*/
+
+/*/ source: http://bl.ocks.org/danswick/d813345baf286a5e0766c6b3d9de01c0
+and chris whong /*/
