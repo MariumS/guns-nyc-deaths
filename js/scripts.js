@@ -33,19 +33,7 @@ map.on('load', function() {
       }
     }
   });
-
-    map.addLayer({
-    'id': 'line',
-    'source': 'guns',
-    'source-layer': 'guns_',
-    'maxzoom': zoomThreshold,
-    'type': 'line',
-    'paint': {
-        'line-color': 'black',
-        'line-width': 2,
-        'line-opacity': 1
-    },
-  });
+});
 
 
 
