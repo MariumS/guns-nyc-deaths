@@ -23,8 +23,12 @@ map.on('load', function() {
             'fill-color': {
               property: 'n_killed',
               stops: [
-                [1, '#fff'],
-                [40, '#f00']
+                     [0, '#f7cdcd'],
+                     [5, '#ee9f9f'],
+                     [10, '#ea8888'],
+                     [20, '#e15e5e'],
+                     [30, '#dd4a4a'],
+                     [50, '#cc0000'],
               ]
             }
           }

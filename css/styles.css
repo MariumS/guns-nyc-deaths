@@ -7,8 +7,31 @@ html, body {
 #mapContainer {
   height: 100%;
   width: 100%;
-  background: lightgray;
+  background: #f7cdcd;
   margin: 0 auto;
 
 
+}
+
+.legend {
+background-color: #ffffcc;
+border-radius: 3px;
+bottom: 30px;
+font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+padding: 10px;
+position: absolute;
+right: 10px;
+z-index: 1;
+}
+
+.legend h4 {
+margin: 0 0 10px;
+}
+
+.legend div span {
+border-radius: 50%;
+display: inline-block;
+height: 10px;
+margin-right: 5px;
+width: 10px;
 }
