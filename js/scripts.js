@@ -40,7 +40,7 @@ map.on('load', function() {
 map.on('click', 'guns_', function (e) {
 new mapboxgl.Popup()
 .setLngLat(e.lngLat)
-.setHTML(e.features[0].properties.ZCTA5CE10)
+.setHTML(e.features[0].properties.n_killed)
 .addTo(map);
 });
 
