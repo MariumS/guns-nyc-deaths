@@ -33,33 +33,26 @@ map.on('load', function() {
       }
     }
   });
-  // Create a popup, but don't add it to the map yet.
-  var popup = new mapboxgl.Popup({
-    closeButton: false,
-    closeOnClick: false
-  });
 
-  map.on('mouseenter', 'ZCTA5CE10', function(e) {
-    // Change the cursor style as a UI indicator.
-    map.getCanvas().style.cursor = 'pointer';
 
-    var feature = e.features[0];
 
-    // Populate the popup and set its coordinates
-    // based on the feature found.
-    popup.setLngLat(e.bbox)
-      .setHTML(`
-      <h4>${feature.properties.ZCTA5CE10}</h4><br/>
-      <p>Population: ${numeral(feature.properties.n_killed).format('0.0a')}</p>
-    `)
-      .addTo(map);
-  });
 
-  map.on('mouseleave', 'ZCTA5CE10', function() {
-    map.getCanvas().style.cursor = '';
-    popup.remove();
-  });
+map.on('click', 'guns_', function (e) {
+new mapboxgl.Popup()
+.setLngLat(e.lngLat)
+.setHTML(e.features[0].properties.ZCTA5CE10)
+.addTo(map);
+});
 
+// Change the cursor to a pointer when the mouse is over the guns_ layer.
+map.on('mouseenter', 'states-layer', function () {
+map.getCanvas().style.cursor = 'pointer';
+});
+
+// Change it back to a pointer when it leaves.
+map.on('mouseleave', 'guns_', function () {
+map.getCanvas().style.cursor = 'pointer';
+});
 
 });
 
